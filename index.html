@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://framerusercontent.com/images/bsvaRUjrx86JRCYIXphFc8QNLpo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>That Works Agency</title>
+    <script>
+      // Prevent dark mode flash by applying theme before render
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+
+        document.documentElement.classList.add(theme);
+
+        // Also set the theme color meta tag
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        if (metaThemeColor) {
+          metaThemeColor.setAttribute('content', theme === 'dark' ? '#000000' : '#ffffff');
+        }
+      })();
+    </script>
+    <style>
+      /* Prevent flash by setting initial colors based on theme */
+      html.dark {
+        background-color: #000000;
+        color: #ffffff;
+      }
+      html:not(.dark) {
+        background-color: #ffffff;
+        color: #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

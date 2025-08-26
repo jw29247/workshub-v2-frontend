@@ -1,0 +1,57 @@
+/* Dark Mode Design Token Utilities */
+@layer utilities {
+  /* Dark mode semantic color tokens */
+  .dark .bg-surface-primary { @apply bg-neutral-900; }
+  .dark .bg-surface-secondary { @apply bg-neutral-800; }
+  .dark .bg-surface-tertiary { @apply bg-neutral-700; }
+
+  .dark .text-content-primary { @apply text-neutral-50; }
+  .dark .text-content-secondary { @apply text-neutral-300; }
+  .dark .text-content-tertiary { @apply text-neutral-400; }
+
+  .dark .border-default { @apply border-neutral-700; }
+  .dark .border-subtle { @apply border-neutral-800; }
+  .dark .border-strong { @apply border-neutral-600; }
+
+  /* Dark mode brand accent tokens */
+  .dark .bg-brand-primary { @apply bg-brand-purple-weak; }
+  .dark .bg-brand-secondary { @apply bg-brand-green; }
+  .dark .text-brand-primary { @apply text-brand-purple-weak; }
+  .dark .text-brand-secondary { @apply text-brand-green; }
+  .dark .bg-accent-gradient { background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+
+  /* Dark mode interactive states */
+  .dark .interactive-primary {
+    @apply bg-brand-purple-weak text-neutral-900 border border-brand-purple-weak;
+    @apply hover:bg-brand-purple-weak/90 hover:border-brand-purple-weak/90;
+    @apply focus:ring-2 focus:ring-brand-purple-weak/20 focus:ring-offset-2 focus:ring-offset-neutral-900;
+    @apply active:bg-brand-purple-weak/80;
+  }
+
+  .dark .interactive-secondary {
+    @apply bg-neutral-800 text-brand-purple-weak border border-brand-purple-weak;
+    @apply hover:bg-brand-purple-weak/10 hover:border-brand-purple-weak;
+    @apply focus:ring-2 focus:ring-brand-purple-weak/20 focus:ring-offset-2 focus:ring-offset-neutral-900;
+    @apply active:bg-brand-purple-weak/20;
+  }
+
+  /* Dark mode Action Button */
+  .dark .btn-action {
+    @apply bg-black text-white border-white shadow-brand;
+  }
+
+  .dark .btn-action:hover {
+    @apply bg-neutral-900 border-white shadow-brand-hover;
+  }
+
+  /* Dark mode card tokens */
+  .dark .card-default {
+    @apply bg-neutral-800 border-neutral-700;
+    @apply hover:border-brand-green/30;
+  }
+
+  .dark .card-elevated {
+    @apply bg-neutral-800 border-neutral-700;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  }
+}

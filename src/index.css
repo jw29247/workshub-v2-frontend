@@ -1,0 +1,89 @@
+@import './fonts.css';
+@import './tokens.css';
+@import './tokens-dark.css';
+@import 'tailwindcss';
+@config '../tailwind.config.js';
+
+@layer base {
+  :root {
+    --accent-start: #667eea; /* indigo */
+    --accent-end: #764ba2;   /* violet */
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    @apply bg-white text-black dark:bg-black dark:text-white;
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .btn-primary-shadow {
+    box-shadow: -1px 1px 4px 0px rgba(0, 0, 0, 0.26), -5px 4px 6px 0px rgba(0, 0, 0, 0.23), -12px 9px 9px 0px rgba(0, 0, 0, 0.13), -21px 16px 10px 0px rgba(0, 0, 0, 0.04);
+  }
+
+  .dark .btn-primary-shadow {
+    box-shadow: -1px 1px 4px 0px rgba(255, 255, 255, 0.26), -5px 4px 6px 0px rgba(255, 255, 255, 0.23), -12px 9px 9px 0px rgba(255, 255, 255, 0.13), -21px 16px 10px 0px rgba(255, 255, 255, 0.04);
+  }
+
+  .btn-primary-shadow-hover:hover {
+    box-shadow: -2px 2px 6px 0px rgba(0, 0, 0, 0.28), -6px 5px 8px 0px rgba(0, 0, 0, 0.25), -14px 11px 11px 0px rgba(0, 0, 0, 0.15), -25px 18px 12px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  .dark .btn-primary-shadow-hover:hover {
+    box-shadow: -2px 2px 6px 0px rgba(255, 255, 255, 0.28), -6px 5px 8px 0px rgba(255, 255, 255, 0.25), -14px 11px 11px 0px rgba(255, 255, 255, 0.15), -25px 18px 12px 0px rgba(255, 255, 255, 0.05);
+  }
+
+  /* Custom Scrollbar Styles */
+  .scrollbar-custom {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.neutral.300') transparent;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    @apply bg-neutral-300 dark:bg-neutral-700 rounded-full;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    @apply bg-neutral-400 dark:bg-neutral-600;
+  }
+
+  .dark .scrollbar-custom {
+    scrollbar-color: theme('colors.neutral.700') transparent;
+  }
+
+  /* Shimmer animation for connection status */
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+  }
+}

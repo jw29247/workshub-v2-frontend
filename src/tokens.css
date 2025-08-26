@@ -1,0 +1,85 @@
+/* Design Token Utilities */
+@layer utilities {
+  /* Typography tokens */
+  .text-heading-xl { @apply text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight; }
+  .text-heading-lg { @apply text-4xl sm:text-5xl font-bold tracking-tight; }
+  .text-heading-md { @apply text-2xl sm:text-3xl font-semibold tracking-tight; }
+  .text-heading-sm { @apply text-xl font-semibold; }
+  .text-body-lg { @apply text-xl font-normal leading-relaxed; }
+  .text-body-md { @apply text-base font-normal leading-relaxed; }
+  .text-body-sm { @apply text-sm font-normal leading-relaxed; }
+  .text-caption { @apply text-xs font-medium; }
+
+  /* Semantic color tokens */
+  .bg-surface-primary { @apply bg-neutral-white; }
+  .bg-surface-secondary { @apply bg-neutral-50; }
+  .bg-surface-tertiary { @apply bg-neutral-100; }
+
+  .text-content-primary { @apply text-neutral-900; }
+  .text-content-secondary { @apply text-neutral-600; }
+  .text-content-tertiary { @apply text-neutral-500; }
+
+  .border-default { @apply border-neutral-200; }
+  .border-subtle { @apply border-neutral-100; }
+  .border-strong { @apply border-neutral-300; }
+
+  /* Brand accent tokens */
+  .bg-brand-primary { @apply bg-brand-purple-strong; }
+  .bg-brand-secondary { @apply bg-brand-green-strong; }
+  .text-brand-primary { @apply text-brand-purple-strong; }
+  .text-brand-secondary { @apply text-brand-green-strong; }
+  .bg-accent-gradient { @apply bg-gradient-accent; }
+
+  /* Status tokens */
+  .bg-status-success { @apply bg-cro-win-strong; }
+  .bg-status-success-weak { @apply bg-cro-win-weak; }
+  .bg-status-warning { @apply bg-cro-no-impact-strong; }
+  .bg-status-warning-weak { @apply bg-cro-no-impact-weak; }
+  .bg-status-error { @apply bg-cro-loss-strong; }
+  .bg-status-error-weak { @apply bg-cro-loss-weak; }
+
+  .text-status-success { @apply text-cro-win-strong; }
+  .text-status-warning { @apply text-cro-no-impact-strong; }
+  .text-status-error { @apply text-cro-loss-strong; }
+
+  /* Interactive states */
+  .interactive-primary {
+    @apply text-neutral-white border border-transparent bg-gradient-accent;
+    @apply hover:shadow-brand-hover focus:outline-none focus:ring-2 focus:ring-brand-purple-strong/20 focus:ring-offset-2;
+    @apply active:opacity-90 shadow-brand transition-all duration-200 ease-brand;
+  }
+
+  .interactive-secondary {
+    @apply bg-neutral-white text-brand-purple-strong border border-brand-purple-strong;
+    @apply hover:bg-brand-purple-strong/5 hover:border-brand-purple-strong;
+    @apply focus:ring-2 focus:ring-brand-purple-strong/20 focus:ring-offset-2;
+    @apply active:bg-brand-purple-strong/10;
+    @apply transition-all duration-200;
+  }
+
+  /* Action Button - Based on your specifications */
+  .btn-action {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-neutral-600 px-8 py-5 text-sm font-medium text-neutral-900 bg-neutral-white;
+    @apply transition-all duration-200 shadow-brand hover:shadow-brand-hover;
+  }
+
+  .btn-action:hover {
+    @apply bg-neutral-50 border-neutral-700;
+    box-shadow:
+      -2px 2px 6px 0px rgba(0, 0, 0, 0.28),
+      -6px 5px 8px 0px rgba(0, 0, 0, 0.25),
+      -14px 11px 11px 0px rgba(0, 0, 0, 0.15),
+      -25px 18px 12px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Card tokens */
+  .card-default {
+    @apply rounded-3xl border border-neutral-200 bg-neutral-white p-8 shadow-sm;
+    @apply hover:shadow-lg hover:border-brand-green/30 transition-all duration-300;
+  }
+
+  .card-elevated {
+    @apply rounded-3xl border border-neutral-200 bg-neutral-white p-8 shadow-lg;
+    @apply hover:shadow-xl transition-all duration-300;
+  }
+}

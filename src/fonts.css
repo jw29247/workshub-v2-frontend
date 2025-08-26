@@ -1,0 +1,25 @@
+/* Space Grotesk Font Family - Vite assets from src */
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('./assets/fonts/static/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('./assets/fonts/static/SpaceGrotesk-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Variable font for modern browsers */
+@font-face {
+  font-family: 'Space Grotesk Variable';
+  src: url('./assets/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
