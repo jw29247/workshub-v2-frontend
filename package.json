@@ -4,13 +4,13 @@
   "private": true,
   "type": "module",
   "description": "WorksHub Frontend - Modern React dashboard for agency operations",
-  "homepage": "https://github.com/your-org/workshub-v2-frontend#readme",
+  "homepage": "https://github.com/jw29247/workshub-v2-frontend#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/workshub-v2-frontend.git"
+    "url": "https://github.com/jw29247/workshub-v2-frontend.git"
   },
   "bugs": {
-    "url": "https://github.com/your-org/workshub-v2-frontend/issues"
+    "url": "https://github.com/jw29247/workshub-v2-frontend/issues"
   },
   "keywords": ["react", "typescript", "dashboard", "operations", "agency"],
   "scripts": {
